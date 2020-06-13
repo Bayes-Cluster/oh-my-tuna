@@ -24,6 +24,7 @@ import re
 import platform
 from contextlib import contextmanager
 
+# python2 to python 3 
 try:
    input = raw_input
 except NameError:
@@ -35,8 +36,19 @@ except ImportError:
     import ConfigParser as configparser
 
 
-mirror_root = "mirrors.tuna.tsinghua.edu.cn"
-host_name = "tuna.tsinghua.edu.cn"
+print("Choose your mirror root")
+print("Input '1' if you want to use tsinghua mirror")
+print("Input '2' if you want to use bfsu mirror")
+mirror_choise = input("type your choise:")
+
+if mirror_choise == "1":
+    mirror_root = "mirrors.tuna.tsinghua.edu.cn"
+
+if mirror_choise == "2":
+    mirror_root = "mirrors.bfsu.edu.cn"
+
+print(mirror_root)
+
 always_yes = False
 verbose = False
 is_global = True
