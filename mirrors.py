@@ -43,9 +43,11 @@ mirror_choise = input("type your choise:")
 
 if mirror_choise == "1":
     mirror_root = "mirrors.tuna.tsinghua.edu.cn"
+    host_name = "tuna.tsinghua.edu.cn"
 
 if mirror_choise == "2":
     mirror_root = "mirrors.bfsu.edu.cn"
+    host_name = "bfsu.edu.cn"
 
 print(mirror_root)
 
